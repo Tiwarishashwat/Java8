@@ -58,6 +58,26 @@ public class Main {
         System.out.println(s4.name);
 
 
+        //        --- Functional Interfaces ---
+//        BiConsumer<T,U> -> take input, modify , no output, method: void accept(T t, U t);
+//        BiPredicate<T,U> -> take input, modify, boolean output, method: boolean test(T t, U t);
+//        BiFunction<T,U,R> -> take input T and U, modify, R output, method: R apply(T t, U t);
+//        --- Functional Interfaces ---
+
+
+
+
+
+
+        BiConsumer<Integer,Integer> biConsumer = (a,b)->System.out.println(a*b);
+        biConsumer.accept(5,7);
+
+        BiPredicate<Integer,Integer> biPredicate = (a,b) -> (a*b)%2==0;
+        System.out.println(biPredicate.test(5,6));
+
+        BiFunction<Integer,Integer,String> biFunction = (a,b) -> ((a*b)%2==0)?"EVEN": "ODD";
+        System.out.println(biFunction.apply(5,6));
+
 
 
 
